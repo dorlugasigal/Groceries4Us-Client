@@ -47,5 +47,22 @@ export const styles = StyleSheet.create({
     fontFamily: 'sans-serif',
     color: 'rgb(92,164,247)',
     fontSize: 18
+  },
+  secondaryButtonContainer: {
+    flex: 1,
+    height: '5%',
+    flexDirection: 'row'
+  },
+  smallBtnContainer: {
+    flex: 1,
+    alignItems: 'center'
+  },
+  buttonText: {
+    color: '#fff'
+  },
+  detailsText: {
+    fontFamily: 'sans-serif',
+    color: '#fff',
+    fontSize: 20
   }
 });

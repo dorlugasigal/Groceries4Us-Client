@@ -1,6 +1,7 @@
 import React from 'react';
 import { styles } from '../../styles/main';
 import { AsyncStorage, ActivityIndicator, StatusBar, View } from 'react-native';
+import DevelopmentFlag from '../../components/DevelopmentFlag/DevelopmentFlag';
 
 export class AuthLoadingScreen extends React.Component {
   constructor() {
@@ -18,6 +19,7 @@ export class AuthLoadingScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
+        <DevelopmentFlag></DevelopmentFlag>
         <ActivityIndicator size={20} />
         <StatusBar barStyle="default" />
       </View>
