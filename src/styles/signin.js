@@ -21,6 +21,7 @@ export const styles = StyleSheet.create({
     paddingLeft: 50
   },
   textInput: {
+    fontFamily: 'sans-serif-light',
     fontSize: 18,
     width: '85%',
     color: '#fff',
@@ -28,23 +29,23 @@ export const styles = StyleSheet.create({
     paddingRight: 25,
     paddingLeft: 25
   },
-  valid: {
-    color: 'rgb(51,139,36)'
-  },
   notValid: {
+    paddingLeft: 30,
+    alignSelf: 'flex-start',
     color: 'rgb(227,71,36)'
   },
   btnContainer: {
     backgroundColor: '#ffffff',
     alignItems: 'center',
     width: '85%',
-    height: '10%',
-    padding: 16,
+    paddingTop: 13,
+    height: '8%',
     margin: 18,
     borderRadius: 30
   },
   btnText: {
+    fontFamily: 'sans-serif',
     color: 'rgb(92,164,247)',
-    fontSize: 20
+    fontSize: 18
   }
 });
