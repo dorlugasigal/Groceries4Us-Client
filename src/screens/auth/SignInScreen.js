@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { styles } from '../../styles/signin';
-import { Text, AsyncStorage, Button, TextInput, View, TouchableHighlight } from 'react-native';
+import { Text, AsyncStorage, Image, TextInput, View, TouchableHighlight } from 'react-native';
 import { registerUser } from '../../services/HttpService';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons } from '@expo/vector-icons';
@@ -23,6 +23,11 @@ export function SignInScreen(props) {
   };
   return (
     <LinearGradient style={styles.container} colors={['rgb(105,197,254)', 'rgb(92,164,247)', 'rgb(98,131,227)']}>
+      <Image
+        style={{ width: '100%', height: '20%', resizeMode: 'contain' }}
+        source={require('./../../styles/logo3.png')}
+      />
+
       <View style={styles.textInputContainer}>
         <Ionicons name="md-person" style={styles.icon} size={32} color="rgb(247,247,247)" />
         <TextInput
