@@ -1,4 +1,4 @@
-![alt text](https://i.imgur.com/kPgBfOr.png)
+![alt text](https://i.imgur.com/ElBniIz.png?1)
 
 
 # Groceries4Us Project
