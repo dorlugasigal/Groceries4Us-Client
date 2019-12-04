@@ -3,9 +3,11 @@
 
 # Groceries4Us Project
 Groceries4Us is a mobile app made with React-Native for client side
-server side with nodejs on this repo
+server side with nodejs on [this repo](https://gitlab.com/DorLugasi/groceries4us-server)
 
-You can find a color on a gradient map and you can use it to display color by its Hexadecimal code, name, or RGB value.
+The idea of the app is to share groceries lists between members
+but the main purpose is to practice modern technologies such as React-Native, NodeJS, MongoDB, CICD 
+and deployment to Heroku
 
 <p align="center">
     <img src="https://img.shields.io/badge/license-MIT-brightgreen.svg">
@@ -24,20 +26,24 @@ You can find a color on a gradient map and you can use it to display color by it
 </p>
 
 ## Preview
-![alt text](https://i.imgur.com/ob27Pc8.gif)
+![alt text](https://i.imgur.com/HWMHDb3.jpg?1)
 
 ## Usage
 
-To clone and run this application, you'll need [Git](https://git-scm.com).
+To clone and run this application, you'll need [Git](https://git-scm.com), and [Yarn](https://yarnpkg.com/en/docs/install#windows-stable)
+and an Android\iOS emulator or a mobile device
 
 From your command line:
 
 ```bash
 # Clone this repository
-$ git clone https://gitlab.com/DorLugasi/colorpicker.git
+$ git clone https://gitlab.com/DorLugasi/groceries4us-client.git
+# install dependencies
+$ yarn
+# Run the app
+$ yarn start
 ```
-you can run the exe in the bin/debug folder,
-or run the solution with visual studio and execute
+
 
 ## Contributing
 
@@ -47,22 +53,33 @@ Please make sure to update tests as appropriate.
 
 
 ## Features:
-- [x] Select any color from the Rainbow selector and the fradient selector
-- [x] Adjust color with Red, Green, Blue and Alpha values
-- [x] Change color code from rgba to rgb (for css , alpha value is 0.0-1.0)
-- [x] Paste any color in the Color textbox, with its:
-  * Hexadecimal value (#4286f4)
-  * RGB/RGBA value ( rgb(66, 134, 244) )
-  * basic Color names (cyan,red blue, green, etc)
-- [x] Pick a color from the mouse Pointer, this works with multiple screens also
-- [x] Middle mouse click on the top panel would relocate the window in its initial location
-- [x] opening the application multiple times results in shaking the window of the initial window
-- [x] change to brightness of the color
+- [x] Sign In With your Email and password
+- [x] Sign Up With your Email and password
+
 
 ## TO-DO:
-- [x] change the gradient color when selecting a color with the pick tool
-- [x] add feature to change the brightness of the color
-
+- [ ] Forget Password Screen
+- [ ] Home Screen
+  * Show lists
+- [ ] Settings
+  * Change picture
+  * Change password
+  * Delete Account
+- [ ] History
+  * Show previous Lists
+  * Clear history (delete all ists permanently )
+- [ ] Lists Manipulation
+  * Create list
+  * Delete list 
+  * Add/Remove Items and amount to list
+  * Add Recipt
+  * Mark as important
+  * Set buyers
+- [ ] Reports
+  * Popular items
+  * Least popular items
+- [ ] Items auto complete
+- [ ] Support multi language
 
 ## License
 
