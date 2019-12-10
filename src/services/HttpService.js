@@ -1,4 +1,6 @@
 import getEnvVars from '../../environment';
+import Base64 from 'Base64';
+
 const { apiUrl } = getEnvVars();
 
 export async function httpMethod(req, callback, error) {
@@ -46,11 +48,16 @@ export async function registerUser(props, callback, error) {
 export async function authenticateUser(props, callback, error) {
   const { email, password } = props;
   let api = `/auth`;
+  var headers = {
+    'Content-Type': 'application/json',
+    Authorization: `Basic ${Base64.btoa(email + ':' + password)}`
+  };
+
   return await httpMethod(
     {
       method: 'POST',
       api,
-      body: { email, password }
+      headers
     },
     callback,
     error

@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { styles } from '../../styles/authStyle';
 import { Text, AsyncStorage, Image, TextInput, View, TouchableHighlight } from 'react-native';
-import { registerUser, authenticateUser } from '../../services/HttpService';
+import { authenticateUser } from '../../services/HttpService';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons } from '@expo/vector-icons';
+import { ToastAndroid } from 'react-native';
 
 import useForm from 'react-hook-form';
 import DevelopmentFlag from '../../components/DevelopmentFlag/DevelopmentFlag';
@@ -12,15 +13,18 @@ export function SignInScreen(props) {
   const { register, setValue, handleSubmit, errors } = useForm();
   _signInAsync = async data => {
     //change this
-    registerUser(
+    authenticateUser(
       data,
       res => {
         if (res && res.token) {
+          console.log(`user's token is ${res.token}`);
           AsyncStorage.setItem('userToken', res.token);
           props.navigation.navigate('App');
+        } else {
+          ToastAndroid.show('Wrong email or password', ToastAndroid.SHORT);
         }
       },
-      error => console.log
+      error => console.log(error)
     );
   };
   return (
@@ -40,8 +44,7 @@ export function SignInScreen(props) {
           ref={register(
             { name: 'email' },
             {
-              required: true,
-              pattern: emailExpression
+              required: true
             }
           )}
           onChangeText={text => setValue('email', text, true)}
@@ -57,15 +60,14 @@ export function SignInScreen(props) {
           ref={register(
             { name: 'password' },
             {
-              required: true,
-              pattern: passwordExpression
+              required: true
             }
           )}
           secureTextEntry={true}
           onChangeText={text => setValue('password', text, true)}
         />
       </View>
-      <TouchableHighlight style={styles.btnContainer} onPress={handleSubmit(_signUp)}>
+      <TouchableHighlight style={styles.btnContainer} onPress={handleSubmit(_signInAsync)}>
         <Text style={styles.btnText}>Sign In</Text>
       </TouchableHighlight>
 
