@@ -45,6 +45,35 @@ export async function registerUser(props, callback, error) {
   }
 }
 
+export async function changePassword(props, callback, error) {
+  const { email } = props;
+  let api = `/auth/forget`;
+
+  return await httpMethod(
+    {
+      method: 'POST',
+      api,
+      body: { email }
+    },
+    callback,
+    error
+  );
+}
+export async function forgetPassword(props, callback, error) {
+  const { email } = props;
+  let api = `/auth/forget`;
+
+  return await httpMethod(
+    {
+      method: 'POST',
+      api,
+      body: { email }
+    },
+    callback,
+    error
+  );
+}
+
 export async function authenticateUser(props, callback, error) {
   const { email, password } = props;
   let api = `/auth`;

@@ -75,7 +75,7 @@ export function SignInScreen(props) {
         <TouchableHighlight
           underlayColor="rgba(0,0,0,0)"
           style={styles.smallBtnContainer}
-          onPress={() => props.navigation.navigate('Forget')}
+          onPress={() => props.navigation.navigate('ForgetPassword')}
         >
           <Text style={styles.buttonText}>Forget Password?</Text>
         </TouchableHighlight>

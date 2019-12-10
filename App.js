@@ -5,10 +5,10 @@ import { HomeScreen } from './src/screens/HomeScreen';
 import { OtherScreen } from './src/screens/OtherScreen';
 import { AuthLoadingScreen } from './src/screens/auth/AuthLoadingScreen';
 import { SignUpScreen } from './src/screens/auth/SignUpScreen';
-
+import { ForgetPasswordScreen } from './src/screens/auth/ForgetPasswordScreen';
 const AppStack = createStackNavigator({ Home: HomeScreen, Other: OtherScreen });
 const AuthStack = createStackNavigator(
-  { SignIn: SignInScreen, SignUp: SignUpScreen },
+  { SignIn: SignInScreen, SignUp: SignUpScreen, ForgetPassword: ForgetPasswordScreen },
   {
     headerMode: 'none',
     navigationOptions: {

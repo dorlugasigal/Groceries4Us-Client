@@ -10,7 +10,9 @@
   "dependencies": {
     "Base64": "^1.1.0",
     "expo": "^35.0.0",
+    "expo-cli": "^3.11.1",
     "expo-linear-gradient": "~7.0.0",
+    "global": "^4.4.0",
     "react": "^16.8.3",
     "react-dom": "16.8.3",
     "react-hook-form": "^3.28.11",
