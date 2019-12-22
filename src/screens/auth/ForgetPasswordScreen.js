@@ -28,7 +28,9 @@ export function ForgetPasswordScreen(props) {
     checkForgetPasswordCode(
       data,
       res => {
-        if (res) {
+        if (res && res.token) {
+          console.log(`user's token is ${res.token}`);
+          AsyncStorage.setItem('userToken', res.token);
           props.navigation.navigate('ChangePassword');
         } else {
           ToastAndroid.show('the code is wrong', ToastAndroid.SHORT);
