@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { styles } from '../../styles/authStyle';
 import { Text, TextInput, View, TouchableHighlight } from 'react-native';
-import { forgetPassword } from '../../services/HttpService';
+import { forgetPassword, checkForgetPasswordCode } from '../../services/HttpService';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons } from '@expo/vector-icons';
 import { ToastAndroid } from 'react-native';
@@ -28,7 +28,11 @@ export function ForgetPasswordScreen(props) {
     checkForgetPasswordCode(
       data,
       res => {
-        props.navigation.navigate('ChangePassword');
+        if (res) {
+          props.navigation.navigate('ChangePassword');
+        } else {
+          ToastAndroid.show('the code is wrong', ToastAndroid.SHORT);
+        }
       },
       error => console.log(error)
     );
@@ -73,12 +77,12 @@ export function ForgetPasswordScreen(props) {
               placeholder="Whats your code?"
               placeholderTextColor="rgb(247,247,247)"
               ref={register(
-                { name: 'code' },
+                { name: 'token' },
                 {
                   required: true
                 }
               )}
-              onChangeText={text => setValue('code', text, true)}
+              onChangeText={text => setValue('token', text, true)}
             />
           </View>
 

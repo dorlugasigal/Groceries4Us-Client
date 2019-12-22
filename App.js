@@ -1,14 +1,20 @@
 import { createStackNavigator } from 'react-navigation-stack';
 import { createSwitchNavigator, createAppContainer } from 'react-navigation';
-import { SignInScreen } from './src/screens/auth/SignInScreen';
-import { HomeScreen } from './src/screens/HomeScreen';
-import { OtherScreen } from './src/screens/OtherScreen';
-import { AuthLoadingScreen } from './src/screens/auth/AuthLoadingScreen';
-import { SignUpScreen } from './src/screens/auth/SignUpScreen';
-import { ForgetPasswordScreen } from './src/screens/auth/ForgetPasswordScreen';
-const AppStack = createStackNavigator({ Home: HomeScreen, Other: OtherScreen });
+import { SignInScreen as SignIn } from './src/screens/auth/SignInScreen';
+import { HomeScreen as Home } from './src/screens/HomeScreen';
+import { OtherScreen as Other } from './src/screens/OtherScreen';
+import { AuthLoadingScreen as AuthLoading } from './src/screens/auth/AuthLoadingScreen';
+import { SignUpScreen as SignUp } from './src/screens/auth/SignUpScreen';
+import { ForgetPasswordScreen as ForgetPassword } from './src/screens/auth/ForgetPasswordScreen';
+import { ChangePasswordScreen as ChangePassword } from './src/screens/auth/ChangePasswordScreen';
+const AppStack = createStackNavigator({ Home, Other });
 const AuthStack = createStackNavigator(
-  { SignIn: SignInScreen, SignUp: SignUpScreen, ForgetPassword: ForgetPasswordScreen },
+  {
+    SignIn,
+    SignUp,
+    ForgetPassword,
+    ChangePassword
+  },
   {
     headerMode: 'none',
     navigationOptions: {
@@ -20,7 +26,7 @@ const AuthStack = createStackNavigator(
 export default createAppContainer(
   createSwitchNavigator(
     {
-      AuthLoading: AuthLoadingScreen,
+      AuthLoading,
       App: AppStack,
       Auth: AuthStack
     },
