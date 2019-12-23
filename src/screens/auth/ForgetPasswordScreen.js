@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { styles } from '../../styles/authStyle';
-import { Text, TextInput, View, TouchableHighlight } from 'react-native';
+import { AsyncStorage, Text, TextInput, View, TouchableHighlight } from 'react-native';
 import { forgetPassword, checkForgetPasswordCode } from '../../services/HttpService';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons } from '@expo/vector-icons';
@@ -28,10 +28,10 @@ export function ForgetPasswordScreen(props) {
     checkForgetPasswordCode(
       data,
       res => {
-        if (res && res.token) {
+        if (res && res.token && res.user && res.user.id) {
           console.log(`user's token is ${res.token}`);
           AsyncStorage.setItem('userToken', res.token);
-          props.navigation.navigate('ChangePassword');
+          props.navigation.navigate('ChangePassword', { id: res.user.id, token: res.token });
         } else {
           ToastAndroid.show('the code is wrong', ToastAndroid.SHORT);
         }
@@ -76,6 +76,7 @@ export function ForgetPasswordScreen(props) {
             <Ionicons name="md-code" style={styles.icon} size={32} color="rgb(247,247,247)" />
             <TextInput
               style={styles.textInput}
+              keyboardType="numeric"
               placeholder="Whats your code?"
               placeholderTextColor="rgb(247,247,247)"
               ref={register(

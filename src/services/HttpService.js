@@ -19,10 +19,14 @@ export async function httpMethod(req, callback, error) {
             },
       body: JSON.stringify(req.body)
     });
-    const res = await response.json();
-    callback(res);
+    try {
+      const res = await response.json();
+      callback(res);
+    } catch (error) {
+      callback(response);
+    }
   } catch (error) {
-    error(error);
+    console.log(error);
   }
 }
 
@@ -45,6 +49,24 @@ export async function registerUser(props, callback, error) {
   }
 }
 
+export async function changePasswordForget(props, callback, error) {
+  const { id, password, token } = props;
+  let api = `/users/${id}/passwordForget`;
+
+  return await httpMethod(
+    {
+      method: 'PUT',
+      api,
+      body: { password },
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: 'Bearer ' + token
+      }
+    },
+    callback,
+    error
+  );
+}
 export async function changePassword(props, callback, error) {
   const { email } = props;
   let api = `/`;

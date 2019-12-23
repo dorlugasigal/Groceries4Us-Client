@@ -1,29 +1,34 @@
 import React, { useState } from 'react';
 import { styles } from '../../styles/authStyle';
-import { Text, TextInput, View, TouchableHighlight } from 'react-native';
-import { changePassword } from '../../services/HttpService';
+import { AsyncStorage, Text, TextInput, View, TouchableHighlight, ToastAndroid } from 'react-native';
+import { changePasswordForget } from '../../services/HttpService';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons } from '@expo/vector-icons';
-import { ToastAndroid } from 'react-native';
 
 import useForm from 'react-hook-form';
 import DevelopmentFlag from '../../components/DevelopmentFlag/DevelopmentFlag';
 
 export function ChangePasswordScreen(props) {
-  const { email } = props;
-  const { register, setValue, handleSubmit, errors } = useForm();
+  const { navigation } = props;
+  const { register, setValue, handleSubmit, errors, watch } = useForm();
   const passwordExpression = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+  const pass = watch('password'); // you can also target specific fields by their names
 
   _changePassword = data => {
-    changePassword(
+    data.id = navigation.getParam('id', -1);
+    data.token = navigation.getParam('token', -1);
+    changePasswordForget(
       data,
       res => {
-        if (res && res.token) {
-          AsyncStorage.setItem('userToken', res.token);
-          props.navigation.navigate('App');
-        }
+        console.log(res);
+        ToastAndroid.show('You Successfully changed your password, Try to log in', ToastAndroid.LONG);
+
+        props.navigation.navigate('SignIn');
       },
-      error => console.log
+      error => {
+        ToastAndroid.show('an Error Occured, please try again later', ToastAndroid.SHORT);
+        console.log;
+      }
     );
   };
 

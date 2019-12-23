@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { styles } from '../../styles/authStyle';
-import { Text, AsyncStorage, Image, TextInput, View, TouchableHighlight } from 'react-native';
-import { registerUser, authenticateUser } from '../../services/HttpService';
+import { Text, AsyncStorage, TextInput, View, TouchableHighlight } from 'react-native';
+import { registerUser } from '../../services/HttpService';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons } from '@expo/vector-icons';
 
 import useForm from 'react-hook-form';
-import { getTimeFieldValues } from 'uuid-js';
 import DevelopmentFlag from '../../components/DevelopmentFlag/DevelopmentFlag';
 
 export function SignUpScreen(props) {

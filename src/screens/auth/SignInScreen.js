@@ -24,7 +24,10 @@ export function SignInScreen(props) {
           ToastAndroid.show('Wrong email or password', ToastAndroid.SHORT);
         }
       },
-      error => console.log(error)
+      error => {
+        ToastAndroid.show('Wrong email or password', ToastAndroid.SHORT);
+        console.log(error);
+      }
     );
   };
   return (
