@@ -1,39 +1,59 @@
-![alt text](https://i.imgur.com/ElBniIz.png)
+<p align="center">
+  <a href="" rel="noopener">
+ <img width=200px height=200px src="https://i.imgur.com/HWMHDb3.jpg?1" alt="Project logo"></a>
 
+</p>
 
-# Groceries4Us Project
-Groceries4Us is a mobile app made with React-Native for client side
-server side with nodejs on [this repo](https://gitlab.com/DorLugasi/groceries4us-server)
+<h3 align="center">Groceries4Us Project</h3>
+
+<div align="center">
+
+[![Status](https://img.shields.io/badge/status-active-success.svg)]()
+[![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
+<img src="https://img.shields.io/badge/contributions-welcome-orange.svg">
+
+</div>
+
+---
+
+<p align="center"> Groceries4Us is a mobile app made with React-Native for client side
+server side with nodejs on [this repo](https://github.com/dorlugasigal/Groceries4Us-server/)
+
+<br>
+
+</p>
+
+## 📝 Table of Contents
+
+- [About](#about)
+- [Getting Started](#getting_started)
+- [Deployment](#deployment)
+- [Built Using](#built_using)
+- [TODO](../TODO.md)
+- [Contributing](../CONTRIBUTING.md)
+- [Authors](#authors)
+- [License](#license)
+
+## 🧐 About <a name = "about"></a>
 
 The idea of the app is to share groceries lists between members
-but the main purpose is to practice modern technologies such as React-Native, NodeJS, MongoDB, CICD 
+but the main purpose is to practice modern technologies such as React-Native, NodeJS, MongoDB, CICD
 and deployment to Heroku
 
-<p align="center">
-    <img src="https://img.shields.io/badge/license-MIT-brightgreen.svg">
-    <img src="https://img.shields.io/badge/contributions-welcome-orange.svg">
-</p>
+## 🏁 Getting Started <a name = "getting_started"></a>
 
-<p align="center">
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
 
-  
-  <a href="#user-content-preview">Preview</a> •
-  <a href="#user-content-usage">Usage</a> •
-  <a href="#user-content-contributing">Contributing</a> •
-  <a href="#user-content-features">Features</a> •
-  <a href="#user-content-to-do">To-DO</a> •
-  <a href="#user-content-license">License</a>
-</p>
-
-## Preview
-![alt text](https://i.imgur.com/HWMHDb3.jpg?1)
-
-## Usage
+### Prerequisites
 
 To clone and run this application, you'll need [Git](https://git-scm.com), and [Yarn](https://yarnpkg.com/en/docs/install#windows-stable)
 and an Android\iOS emulator or a mobile device
 
-From your command line:
+### Installing
+
+From your command line write:
 
 ```bash
 # Clone this repository
@@ -44,45 +64,30 @@ $ yarn
 $ yarn start
 ```
 
+## 🔧 Running the tests <a name = "tests"></a>
 
-## Contributing
+Currently there are no tests :)
+
+## 🚀 Deployment <a name = "deployment"></a>
+
+Add additional notes about how to deploy this on a live system.
+
+## ⛏️ Built Using <a name = "built_using"></a>
+
+- [MongoDB](https://www.mongodb.com/) - Database
+- [Express](https://expressjs.com/) - Server Framework
+- [NodeJs](https://nodejs.org/en/) - Server Environment
+- [React-Native](https://facebook.github.io/react-native/) - Mobile App Framework
+
+## ✍️ Authors <a name = "authors"></a>
+
+- [@dorlugasigal](https://github.com/dorlugasigal) - Idea & Initial work
+
+See also the list of [contributors](https://github.com/dorlugasigal/Groceries4Us-Client/graphs/contributors) who participated in this project.
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
 Please make sure to update tests as appropriate.
 
-
-## Features:
-- [x] Sign In With your Email and password
-- [x] Sign Up With your Email and password
-
-
-## TO-DO:
-- [ ] Forget Password Screen
-- [ ] Home Screen
-  * Show lists
-- [ ] Settings
-  * Change picture
-  * Change password
-  * Delete Account
-- [ ] History
-  * Show previous Lists
-  * Clear history (delete all ists permanently )
-- [ ] Lists Manipulation
-  * Create list
-  * Delete list 
-  * Add/Remove Items and amount to list
-  * Add Recipt
-  * Mark as important
-  * Set buyers
-- [ ] Reports
-  * Popular items
-  * Least popular items
-- [ ] Items auto complete
-- [ ] Support multi language
-
-## License
+## License <a name = "license"></a>
 
 [MIT](https://choosealicense.com/licenses/mit/)
-
-* * *
