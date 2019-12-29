@@ -1,11 +1,5 @@
-## Features:
-
-- [x] Sign In With your Email and password
-- [x] Sign Up With your Email and password
-
 ## TO-DO:
 
-- [ ] Forget Password Screen
 - [ ] Home Screen
   - Show lists
 - [ ] Settings

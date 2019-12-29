@@ -31,7 +31,7 @@ server side with nodejs on [this repo](https://github.com/dorlugasigal/Groceries
 - [Getting Started](#getting_started)
 - [Deployment](#deployment)
 - [Built Using](#built_using)
-- [TODO](../TODO.md)
+- [TODO](./TODO.md)
 - [Contributing](../CONTRIBUTING.md)
 - [Authors](#authors)
 - [License](#license)
@@ -75,6 +75,12 @@ Currently there are no tests :)
 ## 🚀 Deployment <a name = "deployment"></a>
 
 Add additional notes about how to deploy this on a live system.
+
+## Features:
+
+- [x] Sign In With your Email and password
+- [x] Sign Up With your Email and password
+- [x] Forget Password Screen ( and logic )
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
