@@ -61,7 +61,7 @@ From your command line write:
 
 ```bash
 # Clone this repository
-$ git clone https://gitlab.com/DorLugasi/groceries4us-client.git
+$ git clone https://github.com/dorlugasigal/Groceries4Us-Client.git
 # install dependencies
 $ yarn
 # Run the app
