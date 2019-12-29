@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="https://i.imgur.com/HWMHDb3.jpg?1" alt="Project logo"></a>
+ <img src="https://camo.githubusercontent.com/da7107241ab2ab3baec479f40432400c0bbbc324/68747470733a2f2f692e696d6775722e636f6d2f456c426e69497a2e706e67" alt="Project logo"></a>
 
 </p>
 
@@ -35,6 +35,10 @@ server side with nodejs on [this repo](https://github.com/dorlugasigal/Groceries
 - [Contributing](../CONTRIBUTING.md)
 - [Authors](#authors)
 - [License](#license)
+
+## ✌ Preview
+
+<img src="https://camo.githubusercontent.com/4e6f38db082b4f4eb3e719f0465d567924e98c0f/68747470733a2f2f692e696d6775722e636f6d2f48574d484462332e6a70673f31">
 
 ## 🧐 About <a name = "about"></a>
 
