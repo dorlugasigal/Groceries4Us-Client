@@ -1,5 +1,5 @@
 import React from 'react';
-import { AsyncStorage, Button, View } from 'react-native';
+import { AsyncStorage, Text, View } from 'react-native';
 
 import { styles } from '../../styles/main';
 import DevelopmentFlag from '../../components/DevelopmentFlag/DevelopmentFlag';
@@ -21,6 +21,9 @@ export function HomeScreen(props) {
   return (
     <View style={styles.container}>
       <DevelopmentFlag></DevelopmentFlag>
+      <View>
+        <Text>List would show here</Text>
+      </View>
     </View>
   );
 }
