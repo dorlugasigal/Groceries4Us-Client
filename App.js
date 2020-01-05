@@ -7,7 +7,15 @@ import { AuthLoadingScreen as AuthLoading } from './src/screens/auth/AuthLoading
 import { SignUpScreen as SignUp } from './src/screens/auth/SignUpScreen';
 import { ForgetPasswordScreen as ForgetPassword } from './src/screens/auth/ForgetPasswordScreen';
 import { ChangePasswordScreen as ChangePassword } from './src/screens/auth/ChangePasswordScreen';
-const AppStack = createStackNavigator({ Home, Other });
+const AppStack = createStackNavigator(
+  { Home, Other },
+  {
+    headerMode: 'none',
+    navigationOptions: {
+      headerVisible: false
+    }
+  }
+);
 const AuthStack = createStackNavigator(
   {
     SignIn,

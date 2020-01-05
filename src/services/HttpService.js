@@ -111,6 +111,24 @@ export async function checkForgetPasswordCode(props, callback, error) {
   );
 }
 
+export async function getUsersLists(props, callback, error) {
+  const { id, token } = props;
+  let api = `/users/lists/${id}`;
+
+  return await httpMethod(
+    {
+      method: 'GET',
+      api,
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: 'Bearer ' + token
+      }
+    },
+    callback,
+    error
+  );
+}
+
 export async function authenticateUser(props, callback, error) {
   const { email, password } = props;
   let api = `/auth`;
